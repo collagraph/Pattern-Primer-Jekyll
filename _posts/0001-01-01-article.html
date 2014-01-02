@@ -1,0 +1,34 @@
+---
+layout: pattern
+title: Entry Title
+---
+<article class="hentry h-entry reading">
+    <header>
+        <img alt="Northbridge Suspension Bridge" class="p-photo thumbnail" src="/assets/example.jpg">
+
+        <h1 class="p-name">
+            <a href="{{page.url}}" class="u-url entry-title bookmark" xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{ page.title }}</a>
+        </h1><!-- p-name -->
+
+        <time class="dt-published published" datetime="{{ page.date | date: '%Y-%m-%-d' }}">
+            {% assign d = page.date | date: "%-d" %} {% case d %}{% when "1" or "21" or "31" %}{{ d }}<sup>st</sup>{% when "2" or "22" %}{{ d }}<sup>nd</sup>{% when "3" or "23" %}{{ d }}<sup>rd</sup>{% else %}{{ d }}<sup>th</sup>{% endcase %} {{ page.date | date: "%B" }} {{ page.date | date: "%Y" }}
+        </time>
+    </header>
+
+    <section class="entry-content e-content">
+        <p>This is a paragraph of text. Some of the text may be <em>emphasised</em> and some it might even be <strong>strongly emphasised</strong>. Occasionally <q>quoted text</q> may be found within a paragraph &hellip;and of course <a href="#">a link</a> may appear at any point in the text. The average paragraph contains five or six sentences although some may contain as little or one or two while others carry on for anything up to ten sentences and beyond.</p>
+    </section><!-- entry-content e-content -->
+
+    <footer class="post-meta">
+        <div class="post-tags">
+            <h2>Tags:</h2>
+
+            <ul>
+                <li class="p-category"><a rel="tag" href="http://northbridgepa.collagraph.com.au/tags/council-matters/">Council Matters</a></li>
+                <li class="p-category"><a rel="tag" href="http://northbridgepa.collagraph.com.au/tags/plaza-car-park/">Plaza Car Park</a></li>
+                <li class="p-category"><a rel="tag" href="http://northbridgepa.collagraph.com.au/tags/presidents-letters/">President's Letters</a></li>
+                <li class="p-category"><a rel="tag" href="http://northbridgepa.collagraph.com.au/tags/traffic/">Traffic</a></li>
+            </ul>
+        </div><!-- post-tags -->
+    </footer><!-- post-meta -->
+</article><!-- hentry h-entry reading -->
